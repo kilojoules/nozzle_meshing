@@ -16,7 +16,7 @@ i2tm2 = itm*itm; // in^2 to m^2
 // Input: x
 // Output: a
 Function area
-If ( x < 5.0*itm )
+If ( x < 10 * NUM4 )
 // a = i2tm2 * ( 1.75 - 0.75 * Cos( ( 0.2 * x / itm - 1.0 ) * Pi ) );
 // Else
 // a = i2tm2 * ( 1.25 - 0.25 * Cos( ( 0.2 * x / itm - 1.0 ) * Pi ) );
