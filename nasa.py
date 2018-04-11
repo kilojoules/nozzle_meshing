@@ -18,22 +18,17 @@ def nasa_nozzle(t, x):
    print(a, x[3], np.append(a, [x[3]]))
    return np.sqrt(s / np.pi), np.append(a, [x[3]])
 
-t = np.linspace(0, 10, 100)
-x = np.array([5. ** 2 * np.pi, 3. ** 2 * np.pi, 4. ** 2 * np.pi, 8.])
-# A_in, A_throat, A_out, throat location
-# x[3] >.5 and < 1
-# x[0] and x[1] are > 0 and < a_up
-# x[2] <= min(x[0], x[1])
-# Generate ten different .msh files that satisfy this :)
-# For a mesh file, we want to know which x's go with with it.
-s = (nasa_nozzle(t, x))
-plt.plot(t, s[0])
-#plt.plot(t, s[0] ** 2 * np.pi)
-plt.savefig('base.pdf')
-plt.clf()
-#fl = open('myfile.geo', 'r')
-#   fl.write(s[0])
-#fl.close()
-print(s[0])
-print('--')
-print(s[1])
+if __name__=='__main__':
+    t = np.linspace(0, 10, 100)
+    x = np.array([5. ** 2 * np.pi, 3. ** 2 * np.pi, 4. ** 2 * np.pi, 8.])
+    s = (nasa_nozzle(t, x))
+    plt.plot(t, s[0])
+    #plt.plot(t, s[0] ** 2 * np.pi)
+    plt.savefig('base.pdf')
+    plt.clf()
+    #fl = open('myfile.geo', 'r')
+    #   fl.write(s[0])
+    #fl.close()
+    print(s[0])
+    print('--')
+    print(s[1])
